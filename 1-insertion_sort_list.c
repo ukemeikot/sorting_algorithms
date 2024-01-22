@@ -1,6 +1,6 @@
 #include "sort.h"
 /**
-  *insert_sort_list - this function sorts list using insertion sort
+  *insertion_sort_list - this function sorts list using insertion sort
   *@list: the list to be sorted
   *Return: nothing as it is a void function
   */
