@@ -23,4 +23,7 @@ void el_swap(int *array, size_t a, size_t b);
 void insertion_sort_list(listint_t **list);
 void list_swap(listint_t **head, listint_t *prev_node, listint_t *cur_node);
 void selection_sort(int *array, size_t size);
+void quick_sort(int *array, size_t size);
+int split_arr(int *array, int left, int right, size_t size);
+void sort(int *array, int start, int end, size_t size);
 #endif
