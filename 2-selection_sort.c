@@ -5,27 +5,29 @@
   *@array: the array to be sorted
   *@size: the size of the aray
   */
+
 void selection_sort(int *array, size_t size)
 {
-	size_t min, a, b, tmp;
+	unsigned int a, b;
 
 	if (size < 2)
 		return;
+
 	for (a = 0; a < size; a++)
 	{
-		min = a;
+		unsigned int x = a;
+		int temp = array[a];
+
 		for (b = a + 1; b < size; b++)
 		{
-			if (array[b] < array[min])
-				min = b;
+			if (array[b] < temp)
+				temp = array[b], x = b;
 		}
-		if (min != a)
+		if (x != a)
 		{
-			tmp = array[min];
-			array[min] = array[a];
-			array[a] = tmp;
+			array[x] = array[a];
+			array[a] = temp;
 			print_array(array, size);
 		}
 	}
 }
-
