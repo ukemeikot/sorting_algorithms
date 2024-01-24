@@ -41,7 +41,7 @@ void merge_function(int *array, int *left, int *r, size_t size)
  * @array: pointer to array
  * @size: size of the array
  **/
-void merge_function_sort(int *array, size_t size)
+void merge_sort(int *array, size_t size)
 {
 	size_t middle = 0, a;
 	int left_array[1000];
@@ -63,8 +63,8 @@ void merge_function_sort(int *array, size_t size)
 	for (a = middle; a < size; a++)
 		right_array[a - middle] = array[a];
 
-	merge_function_sort(left_array, middle);
-	merge_function_sort(right_array, size - middle);
+	merge_sort(left_array, middle);
+	merge_sort(right_array, size - middle);
 	merge_function(array, left_array, right_array, size);
 }
 
