@@ -28,4 +28,5 @@ int split_arr(int *array, int left, int right, size_t size);
 void sort(int *array, int start, int end, size_t size);
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
+void counting_sort(int *array, size_t size);
 #endif
